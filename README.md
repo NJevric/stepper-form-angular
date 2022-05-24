@@ -1,3 +1,3 @@
 
 ## Step1
-![Home Page](https://github.com/NJevric/stepper-form-angular/src/assets/step1.png)
+![Step1](https://github.com/NJevric/stepper-form-angular/blob/master/src/assets/step1.png)
