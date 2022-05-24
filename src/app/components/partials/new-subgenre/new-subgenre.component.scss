@@ -1,0 +1,18 @@
+.new-subgenre{
+  .new-subgenre-form{
+    @apply w-full;
+    input[type="text"]{
+      @apply py-3 px-4 rounded-md border border-gray-900/50 w-full;
+    }
+    .chb{
+      @apply my-5 flex items-center;
+      input[type="checkbox"]{
+        transform: scale(2);
+        @apply ml-2 mr-3;
+      }
+      label{
+        @apply cursor-pointer;
+      }
+    }
+  }
+}

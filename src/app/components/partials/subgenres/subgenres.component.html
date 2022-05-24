@@ -1,0 +1,9 @@
+<div class="subgenres">
+  <div class="subgenre" *ngFor="let subgenre of subgenres;let i = index;"
+    [ngClass]="{'subgenre--active':subgenreActive.includes(i)}">
+    <app-genre [name]="subgenre.name" (click)="chooseSubgenre(i,subgenre.id)"></app-genre>
+  </div>
+  <div class="add-new-btn" (click)="addNewSubgenre()" [ngClass]="{'subgenre--active':newSubgenreActive===true}">
+    <p>Add New</p>
+  </div>
+</div>

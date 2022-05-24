@@ -1,0 +1,17 @@
+.success{
+  @apply flex flex-col items-center justify-center;
+  height: 45vh;
+  .success-ico{
+    @apply text-6xl text-gray-600 bg-gray-200 py-10 px-12 rounded-full;
+  }
+  .success-desc{
+    @apply text-lg font-medium mt-8;
+  }
+  .success-button{
+    @apply bg-gray-600 text-white px-24 py-2 mt-10 rounded-md;
+    transition: .3s ease;
+    &:hover{
+      @apply bg-gray-700;
+    }
+  }
+}

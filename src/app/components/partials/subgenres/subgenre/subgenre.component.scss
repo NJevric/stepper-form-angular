@@ -1,0 +1,7 @@
+.subgenre{
+  @apply w-full  border border-gray-900/25 rounded-md py-3 text-center cursor-pointer;
+  transition: .3s ease;
+  &:hover{
+    @apply bg-gray-700 text-white;
+  }
+}

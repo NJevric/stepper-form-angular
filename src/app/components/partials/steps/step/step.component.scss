@@ -1,0 +1,35 @@
+.step {
+  @apply flex flex-col relative;
+
+  .step-val {
+    @apply bg-gray-100 rounded-full text-gray-500 font-medium text-lg mb-1 flex items-center justify-center;
+    width: 55px;
+    height: 55px;
+
+  }
+
+  .active {
+    @apply bg-gray-700 text-gray-50;
+    transition: .5s ease;
+  }
+
+  .step-name {
+    @apply font-medium text-xs sm:text-sm text-gray-700 text-center absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+  }
+}
+
+@media screen and(max-width:768px) {
+  .step {
+    .step-val {
+
+      height: 45px;
+      width: 45px;
+      @apply text-sm;
+
+    }
+  }
+}

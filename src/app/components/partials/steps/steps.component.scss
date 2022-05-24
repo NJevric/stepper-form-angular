@@ -1,0 +1,35 @@
+.steps{
+  @apply flex items-center mb-20 md:px-4;
+  .step{
+    @apply flex items-center;
+    &:last-of-type{
+      .line{
+        @apply hidden;
+      }
+    }
+  }
+  .line{
+    width: 80px;
+    height: 2px;
+    @apply bg-gray-200 rounded-full mx-4;
+
+  }
+  .circle{
+    @apply bg-gray-100 rounded-full text-gray-500 font-medium text-lg mb-1 flex items-center justify-center;
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media screen and(max-width:768px){
+  .steps{
+    .line{
+      width: 18px;
+    }
+    .circle{
+      height: 45px;
+      width: 45px;
+      @apply text-sm;
+    }
+  }
+}

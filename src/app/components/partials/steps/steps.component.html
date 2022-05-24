@@ -1,0 +1,16 @@
+<div class="steps">
+  <div class="step" *ngFor="let step of steps;let i = index;">
+    <app-step
+      [val]="step.val"
+      [name]="step.name"
+      [active]="stepActive"
+      *ngIf="step.addNewSubgenreShow!=false && step.whenDotsShow !=false">
+    </app-step>
+    <div class="line" *ngIf="step.addNewSubgenreShow!=false && step.whenDotsShow !=false"></div>
+  </div>
+  <ng-container>
+    <div class="circle" *ngIf="stepActive < 3">
+      <p>...</p>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,13 @@
+.btns{
+  @apply flex justify-end mt-4;
+  .btn{
+    @apply w-1/3 md:w-1/5 mr-m2 rounded-md;
+    transition: .3s ease;
+    &:hover{
+      @apply bg-gray-700 text-white;
+    }
+    &:last-of-type{
+      @apply mr-0;
+    }
+  }
+}

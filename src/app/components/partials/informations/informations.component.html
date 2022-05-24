@@ -1,0 +1,61 @@
+<div class="informations">
+  <form [formGroup]="form" (ngSubmit)="submitBook()">
+    <div class="form-group">
+      <label for="title">Book Title</label>
+      <input type="text" id="title" placeholder="Book Title" formControlName="title" />
+      <p class="err" *ngIf="form.controls['title'].touched && form.controls['title'].errors?.['required']">Title field is required</p>
+    </div>
+    <div class="form-group">
+      <label for="author">Author</label>
+      <select id="author" formControlName="author">
+        <option value="{{author.id}}" *ngFor="let author of authors">{{author.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="isbn">ISBN</label>
+      <input type="text" id="isbn" placeholder="ISBN" formControlName="isbn" />
+      <p class="err" *ngIf="form.controls['isbn'].touched && form.controls['isbn'].errors?.['required']">ISBN field is required</p>
+    </div>
+    <div class="form-group">
+      <label for="publisher">Publisher</label>
+      <select id="publisher" formControlName="publisher">
+        <option value="{{publisher.id}}" *ngFor="let publisher of publishers">{{publisher.name}}</option>
+      </select>
+    </div>
+    <div class="form-group fit">
+      <label for="date">Date published</label>
+      <input type="date" id="date" formControlName="date">
+      <p class="err" *ngIf="form.controls['date'].touched && form.controls['date'].errors?.['required']">Date field is required</p>
+    </div>
+    <div class="form-group fit">
+      <label for="pageNum">Number of pages</label>
+      <input type="number" id="pageNum" min="0" placeholder="Number of pages" formControlName="pageNum" />
+      <p class="err" *ngIf="form.controls['pageNum'].touched && form.controls['pageNum'].errors?.['required']">Page number field is required</p>
+    </div>
+    <div class="form-group fit">
+      <label for="format">Format</label>
+      <select id="format" formControlName="format">
+        <option value="{{format.id}}" *ngFor="let format of formats">{{format.name}}</option>
+      </select>
+    </div>
+    <div class="form-groups">
+      <div class="form-group">
+        <label for="edition">Edition</label>
+        <input type="text" id="edition" placeholder="Edition" formControlName="edition" />
+        <p class="err" *ngIf="form.controls['edition'].touched && form.controls['edition'].errors?.['required']">Edition field is required</p>
+      </div>
+      <div class="form-group">
+        <label for="lang">Edition Language</label>
+        <select id="lang" formControlName="lang">
+          <option value="{{lang.id}}" *ngFor="let lang of langs">{{lang.name}}</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <textarea id="desc" placeholder="Type the description..." formControlName="description">
+      </textarea>
+    </div>
+  </form>
+</div>

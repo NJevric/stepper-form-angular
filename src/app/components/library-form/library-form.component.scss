@@ -1,0 +1,11 @@
+.library-form {
+  @apply absolute bg-white rounded-md border border-gray-900/10 p-4;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @apply w-11/12 xl:w-45;
+
+  .desc-headline {
+    @apply font-medium mb-10;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="library-form">
+
+  <ng-container *ngIf="(stepActive !== 5 && newSubgenreActive === true) || (stepActive !== 4 && newSubgenreActive === false)">
+    <div class="desc-headline">Add book - New Book</div>
+    <app-steps></app-steps>
+
+  </ng-container>
+
+
+  <app-genres *ngIf="stepActive === 1"></app-genres>
+  <app-subgenres *ngIf="stepActive === 2"></app-subgenres>
+  <app-new-subgenre *ngIf="stepActive === 3 && newSubgenreActive === true"></app-new-subgenre>
+  <app-informations
+    *ngIf="(stepActive === 4 && newSubgenreActive === true) || (stepActive === 3 && newSubgenreActive === false)">
+  </app-informations>
+  <app-success
+    *ngIf="(stepActive === 5 && newSubgenreActive === true) || (stepActive === 4 && newSubgenreActive === false)">
+  </app-success>
+
+
+  <app-buttons *ngIf="(stepActive !== 5 && newSubgenreActive === true) || (stepActive !== 4 && newSubgenreActive === false)"></app-buttons>
+</div>

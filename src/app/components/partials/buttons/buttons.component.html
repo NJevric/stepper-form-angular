@@ -1,0 +1,12 @@
+<div class="btns">
+  <div class="btn" *ngIf="step!=1">
+    <app-button [buttonText]="'Back'" (click)="goBack()" [hasIco]="true">
+    </app-button>
+  </div>
+  <div class="btn">
+    <app-button [buttonText]="'Next'"
+      (click)="next()"
+      [disableBtn]="disableBtn && formNewSubgenre.invalid && formBookInfo.invalid">
+    </app-button>
+  </div>
+</div>

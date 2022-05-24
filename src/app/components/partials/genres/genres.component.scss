@@ -1,0 +1,17 @@
+.genres {
+  @apply flex justify-between md:justify-start items-baseline flex-wrap;
+
+  .genre {
+    @apply w-45 md:w-23 mb-4 md:mr-m2 rounded-md;
+    transition: .5s ease;
+    &:nth-of-type(4n) {
+      @apply mr-0;
+    }
+  }
+
+  .genre--active {
+    @apply bg-gray-700 text-white;
+
+  }
+
+}

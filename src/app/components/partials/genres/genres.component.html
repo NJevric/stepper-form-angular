@@ -1,0 +1,5 @@
+<div class="genres">
+  <div class="genre" *ngFor="let genre of genres;let i = index;" [ngClass]="{'genre--active': genreActive === i}">
+    <app-genre [name]="genre.name" (click)="chooseGenre(i)"></app-genre>
+  </div>
+</div>
